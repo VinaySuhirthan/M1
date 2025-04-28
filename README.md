@@ -1,5 +1,3 @@
-## NAME:K S Vinay Suhirthan
-## REGISTER NUMBER:212224230305
 
 # EX-01-Datatypes-Operators
 ## AIM:
@@ -11,24 +9,44 @@ Write a C program to read 3 characters one by one and print the characters in a 
 3.	Print the characters in reverse order using the printf function.
 4.	End the program.
 
-## PROGRAM:4
-```
+## PROGRAM:
+``` c
 #include <stdio.h>
-int main()
+
+int main() 
 {
-    char ch1, ch2, ch3;
-    printf("Enter first character: ");
-    scanf(" %c", &ch1);
-    printf("Enter second character: ");
-    scanf(" %c", &ch2);
-    printf("Enter third character: ");
-    scanf(" %c", &ch3);
-    printf("Characters in reverse order: %c %c %c\n", ch3, ch2, ch1);
+    char char1, char2, char3;
+
+    printf("Enter the first character: ");
+    scanf(" %c", &char1);
+    printf("Enter the second character: ");
+    scanf(" %c", &char2);
+    printf("Enter the third character: ");
+    scanf(" %c", &char3);
+
+    printf("Characters in reverse order: %c %c %c\n", char3, char2, char1);
+
     return 0;
 }
 ```
 ## OUTPUT:
-![Screenshot 2025-04-27 135117](https://github.com/user-attachments/assets/b9478e4f-5131-4a70-a402-cc8515fe26cd)
+
+
+![image](https://github.com/user-attachments/assets/e2f86591-f5bb-4a18-b2c9-8cd51f1585ea)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## RESULT:
 Thus the program to read 3 characters one by one and print the characters in a reverse order has been executed successfully.
@@ -47,26 +65,36 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
-```
+```c
 #include <stdio.h>
-int main() 
-{
+
+int main() {
     int A;
-    printf("Enter a value: ");
+
+    printf("Enter a value for A: ");
     scanf("%d", &A);
-    if (A > 0)
-    {
-        printf("%d is a positive number.\n", A);
+
+    if (A > 0) {
+        printf("A is a positive number.\n");
+    } else {
+        printf("A is not a positive number.\n");
     }
-    else 
-    {
-        printf("%d is not a positive number.\n", A);
-    }
+
     return 0;
 }
 ```
-## OUTPUT:
-![Screenshot 2025-04-27 135310](https://github.com/user-attachments/assets/080e5a7c-8d2b-479e-a3ee-83ac9474e562)
+# OUTPUT:
+![image](https://github.com/user-attachments/assets/c4a9604a-0730-4487-a0fc-f249b5c36555)
+
+
+
+
+
+
+
+
+
+
 
 # RESULT:
 Thus the program to read A values and check whether A is positive number or not has been executed successfully.
@@ -89,25 +117,39 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
-```
+```c
 #include <stdio.h>
-int main() 
-{
+
+int main() {
     int num1, den1, num2, den2;
-    float frac1, frac2, min;
-    printf("Enter numerator and denominator of first fraction: ");
-    scanf("%d%d", &num1, &den1);
-    printf("Enter numerator and denominator of second fraction: ");
-    scanf("%d%d", &num2, &den2);
-    frac1 = (float)num1 / den1;
-    frac2 = (float)num2 / den2;
-    min = (frac1 < frac2) ? frac1 : frac2;
-    printf("Minimum value between the two fractions is: %.2f\n", min);
+    float fraction1, fraction2, min;
+
+    printf("Enter the numerator and denominator of the first fraction: ");
+    scanf("%d %d", &num1, &den1);
+
+    printf("Enter the numerator and denominator of the second fraction: ");
+    scanf("%d %d", &num2, &den2);
+
+    fraction1 = (float)num1 / den1;
+    fraction2 = (float)num2 / den2;
+
+    min = (fraction1 < fraction2) ? fraction1 : fraction2;
+
+    printf("The smaller fraction in decimal form is: %.2f\n", min);
+
     return 0;
 }
 ```
 ## OUTPUT:
-![Screenshot 2025-04-27 135829](https://github.com/user-attachments/assets/b6bb8d31-1048-4f96-bc33-7dc1657aab13)
+
+
+
+![image](https://github.com/user-attachments/assets/dc737d1f-c65d-4bd5-ba94-df6ed853069a)
+
+
+
+
+
 
 ## RESULT:
 Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
@@ -129,27 +171,36 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
-
-```
+```c
 #include <stdio.h>
 
 int main() {
-    int value;
+    int input;
+
     printf("Enter a value: ");
-    scanf("%d", &value);
-    
-    if (value == 1) {
+    scanf("%d", &input);
+
+    if (input == 1) {
         printf("The input value is equal to 1.\n");
     } else {
         printf("The input value is not equal to 1.\n");
     }
-    
+
     return 0;
 }
-
 ```
 ## OUTPUT:
-![Screenshot 2025-04-27 135927](https://github.com/user-attachments/assets/4fd0e610-59ac-469f-a23d-a9818b024f62)
+
+
+![image](https://github.com/user-attachments/assets/22e4328c-df6c-40af-bcbd-1705974efd30)
+
+
+
+
+
+
+
+	
 
 ## RESULT:
 Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
@@ -174,50 +225,45 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
-```
+```c
 #include <stdio.h>
-int main()
-{
-    int m1, m2, m3;
-    float tot, per;
-    printf("Enter marks of three subjects: ");
-    scanf("%d%d%d", &m1, &m2, &m3);
+
+int main() {
+    int m1, m2, m3; 
+    float tot, per; 
+
+    printf("Enter marks for Subject 1: ");
+    scanf("%d", &m1);
+    printf("Enter marks for Subject 2: ");
+    scanf("%d", &m2);
+    printf("Enter marks for Subject 3: ");
+    scanf("%d", &m3);
+
     tot = m1 + m2 + m3;
-    per = tot / 3;
+    per = tot / 3.0;
+
     printf("Total Marks = %.2f\n", tot);
     printf("Percentage = %.2f\n", per);
-    if (m1 >= 40 && m2 >= 40 && m3 >= 40)
-    {
-        if (per >= 60)
-	{
+
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40) {
+        if (per >= 60) {
             printf("Division = First\n");
-        }
-	else if (per >= 48)
-	{
+        } else if (per >= 48) {
             printf("Division = Second\n");
-        } 
-	else if (per >= 36) 
-	{
+        } else if (per >= 36) {
             printf("Division = Pass\n");
+        } else {
+            printf("Division = Fail\n");
         }
-    } 
-    else
-    {
+    } else {
         printf("Division = Fail\n");
     }
-    
+
     return 0;
 }
 ```
 ## OUTPUT:
-![Screenshot 2025-04-27 140516](https://github.com/user-attachments/assets/aee51f47-4420-4f16-92a2-7d44d0e4d1ef)
-
-![Screenshot 2025-04-27 141343](https://github.com/user-attachments/assets/980f567a-f685-42a9-9bae-17577f851602)
-
-![Screenshot 2025-04-27 141627](https://github.com/user-attachments/assets/85e4450a-cce8-4d20-91e6-3e7b8b7e5e7d)
-
-
-
+![image](https://github.com/user-attachments/assets/2a79aa07-c656-4059-b56b-7427d188ab03)
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
